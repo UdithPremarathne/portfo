@@ -1,0 +1,78 @@
+// var colors
+$accent: #008080;
+$light: #f3f3f3;
+$lighter: #ffffff;
+$dark: #333333;
+$darker: #000000;
+
+// var font-sizes
+$fs: 1rem;
+$fs-xs: $fs * .75;
+$fs-sm: $fs * 1;
+$fs-m: $fs * 1.5;
+$fs-lg: $fs * 2;
+$fs-xl: $fs * 3;
+$fs-xxl: $fs * 6;
+
+// var heights
+$h10: 10vh;
+$h20: 20vh;
+$h40: 40vh;
+$h50: 50vh;
+$h60: 60vh;
+$h80: 80vh;
+$h90: 90vh;
+$h100: 100vh;
+
+// var line heights
+$lh1: 1.5;
+
+// var widths
+$w10: 10vw;
+$w20: 20vw;
+$w30: 30vw;
+$w40: 40vw;
+$w50: 50vw;
+$w80: 80vw;
+$w90: 90vw;
+$w100: 100vw;
+
+// var spacings
+$sp5: 5px;
+$sp10: 10px;
+$sp20: 20px;
+$sp30: 30px;
+$sp40: 40px;
+$sp50: 50px;
+$sp80: 80px;
+$sp100: 100px;
+$sp200: 200px;
+
+// var thicknesses
+$th1: 1px;
+$th2: 2px;
+$th3: 3px;
+$th4: 5px;
+$th5: 7px;
+
+// var box shadow
+$bsh: 0 $th3 $th3 $lighter;
+
+// var text shadow
+$tsh: 0 $th1 $th1 $darker;
+
+// var transitions
+$tri1: .2s;
+
+// var screen sizes
+$dispDesktop: 1024px;
+$dispMobile: 300px;
+
+// var total
+$halfquarter: 12.5%;
+$quarter: 25%;
+$half: 50%;
+$full: 100%;
+
+// var output types
+$large: 1000px;

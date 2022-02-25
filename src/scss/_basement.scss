@@ -1,0 +1,365 @@
+header.appHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: $h100;
+    justify-content: center;
+
+    div.appAvatar {
+        height: $sp200;
+        width: $sp200;
+
+        img.appAvatarImage {
+            height: $sp200;
+            width: $sp200;
+            border-radius: $sp200;
+        }
+    }
+
+    div.appTitle {
+        h1.appTitleText {
+            font-size: $fs-xxl;
+        }
+    }
+
+    div.appSubTitle {
+        h2.appSubTitleText {
+            font-size: $fs-lg;
+            color: $dark;
+        }
+    }
+
+    div.appAbout {
+        width: $half;
+        text-align: center;
+        margin: $sp20 0;
+    }
+
+    ul.appSocialsList {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        margin: $sp20 0;
+        width: $halfquarter;
+    }
+}
+
+section.appProjects {
+    height: auto;
+
+    .appProjectsTitle {
+        align-items: center;
+        display: flex;
+        height: $h10;
+
+        h3.appProjectsTitleText {
+            letter-spacing: $sp20;
+        }
+    }
+
+    .appProjectsContent {
+        align-items: center;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        column-gap: $w10;
+        margin: $sp10 0;
+
+        .appProjectsContentCell {
+            min-height: $h80;
+            margin: 0 0 $h10 0;
+
+            .appProjectsContentCellTitle {
+                letter-spacing: $sp10;
+                margin: $sp10 0;
+                text-decoration: underline;
+            }
+
+            .appProjectsContentCellImage {
+                align-items: center;
+                background-color: $light;
+                display: flex;
+                justify-content: center;
+                margin: $sp20 0;
+                aspect-ratio: 16/9;
+
+                .appProjectsContentCellImageContent {
+                    height: $full;
+                    width: $full;
+                }
+            }
+
+            .appProjectsContentCellDescription {
+                margin: $sp20 0;
+                width: $w40;
+                line-height: $lh1;
+            }
+
+            .appProjectsContentCellActions {
+                display: flex;
+                flex-direction: row-reverse;
+                width: $w40;
+
+                button.appProjectsContentCellActionsDetails {
+                    border-radius: $sp20;
+                }
+            }
+        }
+    }
+}
+
+section.projectModal {
+    background-color: $lighter;
+    display: none;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: $full;
+    max-height: $full;
+    overflow-y: auto;
+
+    .projectModalContent {
+        margin: $sp10;
+
+        .projectModalContentActions {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            height: $h10;
+            justify-content: space-between;
+
+            h2.projectModalContentActionsTitle {
+                letter-spacing: $sp10;
+                text-decoration: underline;
+            }
+        }
+
+        .projectModalContentBody {
+            .projectModalContentBodyMetaSection {
+                align-items: center;
+                display: flex;
+                height: $h80;
+                justify-content: flex-start;
+
+                .projectModalContentBodyMetaSectionTrailer {
+                    margin: 0 $sp40;
+
+                    iframe {
+                        aspect-ratio: 16/9;
+                    }
+                }
+
+                .projectModalContentBodyMetaSectionDetails {
+                    align-items: flex-start;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    .metaSectionDetail {
+                        margin: 0 0 $sp10 0;
+
+                        span.metaSectionDetailKey {
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+
+            .projectModalContentBodyScreenshotsSection {
+                margin: $sp40;
+
+                h3.projectModalContentBodyScreenshotsSectionTitle {
+                    letter-spacing: $sp10;
+                }
+
+                .projectModalContentBodyScreenshotsSectionGallery {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    column-gap: $sp40;
+
+                    .projectModalContentBodyScreenshotsSectionGalleryImage {
+                        align-items: center;
+                        background-color: $light;
+                        display: flex;
+                        justify-content: center;
+                        margin: $sp40;
+                        aspect-ratio: 16/9;
+                    }
+
+                    .projectModalContentBodyScreenshotsSectionGalleryImageMobile {
+                        align-items: center;
+                        background-color: $light;
+                        display: flex;
+                        justify-content: center;
+                        margin: $sp100;
+                        aspect-ratio: 9/16;
+                    }
+
+                    .projectModalContentBodyScreenshotsSectionGalleryImage,
+                    .projectModalContentBodyScreenshotsSectionGalleryImageMobile {
+                        .projectModalContentBodyScreenshotsSectionGalleryImageContent {
+                            height: $full;
+                            width: $full;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer.appFooter {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: $h50;
+
+    .appFooterNavbar {
+        width: $full;
+
+        ul.appSocialsList {
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            margin: $sp20 auto;
+            width: $halfquarter;
+        }
+    }
+}
+
+// DESKTOP
+@media screen and (max-width: $dispDesktop) {
+    header.appHeader {
+        transform: scale(.8);
+
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        div.appTitle {
+            h1.appTitleText {
+                font-size: $fs-xl;
+            }
+        }
+
+        ul.appSocialsList {
+            margin: $sp10 0;
+            width: $quarter;
+        }
+    }
+
+    section.appProjects {
+        height: auto;
+
+        .appProjectsContent {
+            display: grid;
+            grid-template-columns: auto;
+
+            .appProjectsContentCell {
+                margin: $sp40 0;
+
+                .appProjectsContentCellImage {
+                    width: $w80;
+                }
+
+                .appProjectsContentCellDescription {
+                    margin: $sp20 0;
+                    width: $w80;
+                    line-height: $lh1;
+                }
+
+                .appProjectsContentCellActions {
+                    display: block;
+
+                    button.appProjectsContentCellActionsDetails {
+                        background-color: $lighter;
+                        border-radius: 0;
+                        border: $th1 solid $darker;
+                        color: $darker;
+                        font-weight: bold;
+                        padding: $sp10;
+
+                        &:hover {
+                            background-color: $darker;
+                            border: $th1 solid $darker;
+                            color: $lighter;
+                            transition: $tri1;
+                        }
+
+                    }
+
+
+                }
+
+
+            }
+
+
+        }
+
+
+    }
+
+    section.projectModal {
+
+        .projectModalContent {
+
+            .projectModalContentBody {
+
+                .projectModalContentBodyMetaSection {
+                    align-items: flex-start;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    height: $full;
+
+                    .projectModalContentBodyMetaSectionTrailer {
+                        margin: $sp40;
+
+                        iframe {
+                            width: $full;
+                        }
+                    }
+
+                    .projectModalContentBodyMetaSectionDetails {
+                        margin: $sp80;
+
+                        .metaSectionDetail {
+                            margin: 0 0 $sp10 0;
+
+                            span.metaSectionDetailKey {
+                                font-style: italic;
+                            }
+                        }
+                    }
+                }
+
+                .projectModalContentBodyScreenshotsSection {
+
+                    .projectModalContentBodyScreenshotsSectionGallery {
+                        display: grid;
+                        grid-template-columns: auto;
+
+                        .projectModalContentBodyScreenshotsSectionGalleryImage {
+                            margin: $sp40;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer.appFooter {
+        .appFooterNavbar {
+            width: $full;
+
+            ul.appSocialsList {
+                width: $quarter;
+            }
+        }
+    }
+
+}

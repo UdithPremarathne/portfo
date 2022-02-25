@@ -1,0 +1,38 @@
+button.primaryBtn {
+    background-color: $darker;
+    border: none;
+    color: $lighter;
+    font-size: $fs-sm;
+    font-weight: bold;
+    padding: $sp10 $sp20;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $lighter;
+        color: $darker;
+        transition: $tri1;
+    }
+
+}
+
+button.primaryInvertBtn {
+    background-color: $lighter;
+    border: none;
+    color: $darker;
+    padding: $sp10 $sp20;
+    cursor: pointer;
+
+    h3 {
+        color: $darker;
+    }
+
+    &:hover {
+        background-color: $darker;
+        transition: $tri1;
+
+        h3 {
+            color: $lighter;
+        }
+    }
+
+}

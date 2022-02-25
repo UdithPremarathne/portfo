@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  padding: 0 20px;
+}
+
+::-webkit-scrollbar {
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  cursor: pointer;
+}
+
+.largeDisplayText {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  word-wrap: break-word;
+  height: 1000px;
+  width: 1000px;
+}
+.largeDisplayText h1 {
+  font-size: 6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+strong,
+b,
+em,
+blockquote {
+  color: #000000;
+  font-family: "Didact Gothic", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+.lightText {
+  color: #ffffff;
+}
+
+.darkText {
+  color: #000000;
+}
+
+textarea.primaryTextarea {
+  background-color: transparent;
+  border: none;
+  color: #008080;
+  height: 100%;
+  font-size: 3rem;
+  outline: none;
+  padding: 10px;
+  resize: none;
+}
+@media screen and (max-width: 1024px) {
+  textarea.primaryTextarea {
+    min-height: 40vh;
+    padding: 0;
+  }
+}
+
+button.primaryBtn {
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+button.primaryBtn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition: 0.2s;
+}
+
+button.primaryInvertBtn {
+  background-color: #ffffff;
+  border: none;
+  color: #000000;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+button.primaryInvertBtn h3 {
+  color: #000000;
+}
+button.primaryInvertBtn:hover {
+  background-color: #000000;
+  transition: 0.2s;
+}
+button.primaryInvertBtn:hover h3 {
+  color: #ffffff;
+}
+
+header.appHeader {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+header.appHeader div.appAvatar {
+  height: 200px;
+  width: 200px;
+}
+header.appHeader div.appAvatar img.appAvatarImage {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+}
+header.appHeader div.appTitle h1.appTitleText {
+  font-size: 6rem;
+}
+header.appHeader div.appSubTitle h2.appSubTitleText {
+  font-size: 2rem;
+  color: #333333;
+}
+header.appHeader div.appAbout {
+  width: 50%;
+  text-align: center;
+  margin: 20px 0;
+}
+header.appHeader ul.appSocialsList {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 20px 0;
+  width: 12.5%;
+}
+
+section.appProjects {
+  height: auto;
+}
+section.appProjects .appProjectsTitle {
+  align-items: center;
+  display: flex;
+  height: 10vh;
+}
+section.appProjects .appProjectsTitle h3.appProjectsTitleText {
+  letter-spacing: 20px;
+}
+section.appProjects .appProjectsContent {
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  column-gap: 10vw;
+  margin: 10px 0;
+}
+section.appProjects .appProjectsContent .appProjectsContentCell {
+  min-height: 80vh;
+  margin: 0 0 10vh 0;
+}
+section.appProjects .appProjectsContent .appProjectsContentCell .appProjectsContentCellTitle {
+  letter-spacing: 10px;
+  margin: 10px 0;
+  text-decoration: underline;
+}
+section.appProjects .appProjectsContent .appProjectsContentCell .appProjectsContentCellImage {
+  align-items: center;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  aspect-ratio: 16/9;
+}
+section.appProjects .appProjectsContent .appProjectsContentCell .appProjectsContentCellImage .appProjectsContentCellImageContent {
+  height: 100%;
+  width: 100%;
+}
+section.appProjects .appProjectsContent .appProjectsContentCell .appProjectsContentCellDescription {
+  margin: 20px 0;
+  width: 40vw;
+  line-height: 1.5;
+}
+section.appProjects .appProjectsContent .appProjectsContentCell .appProjectsContentCellActions {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 40vw;
+}
+section.appProjects .appProjectsContent .appProjectsContentCell .appProjectsContentCellActions button.appProjectsContentCellActionsDetails {
+  border-radius: 20px;
+}
+
+section.projectModal {
+  background-color: #ffffff;
+  display: none;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+section.projectModal .projectModalContent {
+  margin: 10px;
+}
+section.projectModal .projectModalContent .projectModalContentActions {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  justify-content: space-between;
+}
+section.projectModal .projectModalContent .projectModalContentActions h2.projectModalContentActionsTitle {
+  letter-spacing: 10px;
+  text-decoration: underline;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection {
+  align-items: center;
+  display: flex;
+  height: 80vh;
+  justify-content: flex-start;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionTrailer {
+  margin: 0 40px;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionTrailer iframe {
+  aspect-ratio: 16/9;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionDetails {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionDetails .metaSectionDetail {
+  margin: 0 0 10px 0;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionDetails .metaSectionDetail span.metaSectionDetailKey {
+  font-style: italic;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyScreenshotsSection {
+  margin: 40px;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyScreenshotsSection h3.projectModalContentBodyScreenshotsSectionTitle {
+  letter-spacing: 10px;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyScreenshotsSection .projectModalContentBodyScreenshotsSectionGallery {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 40px;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyScreenshotsSection .projectModalContentBodyScreenshotsSectionGallery .projectModalContentBodyScreenshotsSectionGalleryImage {
+  align-items: center;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  aspect-ratio: 16/9;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyScreenshotsSection .projectModalContentBodyScreenshotsSectionGallery .projectModalContentBodyScreenshotsSectionGalleryImageMobile {
+  align-items: center;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+  aspect-ratio: 9/16;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyScreenshotsSection .projectModalContentBodyScreenshotsSectionGallery .projectModalContentBodyScreenshotsSectionGalleryImage .projectModalContentBodyScreenshotsSectionGalleryImageContent,
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyScreenshotsSection .projectModalContentBodyScreenshotsSectionGallery .projectModalContentBodyScreenshotsSectionGalleryImageMobile .projectModalContentBodyScreenshotsSectionGalleryImageContent {
+  height: 100%;
+  width: 100%;
+}
+
+footer.appFooter {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 50vh;
+}
+footer.appFooter .appFooterNavbar {
+  width: 100%;
+}
+footer.appFooter .appFooterNavbar ul.appSocialsList {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 20px auto;
+  width: 12.5%;
+}
+
+@media screen and (max-width: 1024px) {
+  header.appHeader {
+    transform: scale(0.8);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header.appHeader div.appTitle h1.appTitleText {
+    font-size: 3rem;
+  }
+  header.appHeader ul.appSocialsList {
+    margin: 10px 0;
+    width: 25%;
+  }
+
+  section.appProjects {
+    height: auto;
+  }
+  section.appProjects .appProjectsContent {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  section.appProjects .appProjectsContent .appProjectsContentCell {
+    margin: 40px 0;
+  }
+  section.appProjects .appProjectsContent .appProjectsContentCell .appProjectsContentCellImage {
+    width: 80vw;
+  }
+  section.appProjects .appProjectsContent .appProjectsContentCell .appProjectsContentCellDescription {
+    margin: 20px 0;
+    width: 80vw;
+    line-height: 1.5;
+  }
+  section.appProjects .appProjectsContent .appProjectsContentCell .appProjectsContentCellActions {
+    display: block;
+  }
+  section.appProjects .appProjectsContent .appProjectsContentCell .appProjectsContentCellActions button.appProjectsContentCellActionsDetails {
+    background-color: #ffffff;
+    border-radius: 0;
+    border: 1px solid #000000;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px;
+  }
+  section.appProjects .appProjectsContent .appProjectsContentCell .appProjectsContentCellActions button.appProjectsContentCellActionsDetails:hover {
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+    transition: 0.2s;
+  }
+
+  section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+  }
+  section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionTrailer {
+    margin: 40px;
+  }
+  section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionTrailer iframe {
+    width: 100%;
+  }
+  section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionDetails {
+    margin: 80px;
+  }
+  section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionDetails .metaSectionDetail {
+    margin: 0 0 10px 0;
+  }
+  section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionDetails .metaSectionDetail span.metaSectionDetailKey {
+    font-style: italic;
+  }
+  section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyScreenshotsSection .projectModalContentBodyScreenshotsSectionGallery {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyScreenshotsSection .projectModalContentBodyScreenshotsSectionGallery .projectModalContentBodyScreenshotsSectionGalleryImage {
+    margin: 40px;
+  }
+
+  footer.appFooter .appFooterNavbar {
+    width: 100%;
+  }
+  footer.appFooter .appFooterNavbar ul.appSocialsList {
+    width: 25%;
+  }
+}
