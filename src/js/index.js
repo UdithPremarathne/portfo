@@ -6,6 +6,7 @@ $(document).ready(function () {
             imageUrl: "./images/projectImage0.png",
             description: `Stolen my paper is a 3rd person hyper casual game where you can find a way to steal the final exam paper by sneaking into the school premises. Player must do mini tasks and solve simple puzzles to reach to his goals. `,
             trailerTag: `<iframe width="640" height="480" src="https://www.youtube.com/embed/38tdoIjw2i4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+            playstore: `<a href='https://play.google.com/store/apps/details?id=com.rfactory.spaper&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img class='projectModalContentBodyMetaSectionDetailsPlaystoreImage' alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>`,
             released: "2020",
             studio: "R-Factory Gaming",
             platforms: "Android",
@@ -32,6 +33,7 @@ $(document).ready(function () {
             imageUrl: "./images/projectImage1.png",
             description: `This is a hyper-casual running game based on building roads using color stacks. The main task of this game is to collect color stacks on the road and fill the black spaces using collected stacks. There are three different paths you have to fill your way while running forward.`,
             trailerTag: `<iframe src="https://drive.google.com/file/d/1mzuDa4zNT2KsNRl5Phvtmh7599mIIL3m/preview" width="640" height="480" allow="autoplay"></iframe>`,
+            playstore: `<a href='https://play.google.com/store/apps/details?id=com.Rfactory.FillMyWay&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img class='projectModalContentBodyMetaSectionDetailsPlaystoreImage' alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>`,
             released: "2020",
             studio: "R-Factory Gaming",
             platforms: "Android",
@@ -59,6 +61,7 @@ $(document).ready(function () {
             imageUrl: "./images/projectImage2.png",
             description: `The last samurai is a 2D platformer game that I was created for the Game Technology project at the university.  The game has controller like Mario. For the Development process I used Unity engine and C# language.`,
             trailerTag: `<iframe src="https://drive.google.com/file/d/1osgl1w00uo8HRfq9ZTHuX5b_CHLUcqhU/preview" width="640" height="480" allow="autoplay"></iframe>`,
+            playstore: "",
             released: "",
             studio: "",
             platforms: "PC",
@@ -80,6 +83,7 @@ $(document).ready(function () {
             imageUrl: "./images/projectImage3.png",
             description: `Ska8er  is a 2D Space shooter game which was created for fun. It was made using construct 3 and I also did all the art assets and the level designing in-engine.`,
             trailerTag: `<iframe src="https://drive.google.com/file/d/1EaYi7NEtJyzsCxvaLDYr0WgGz3zHvcY4/preview" width="640" height="480" allow="autoplay"></iframe>`,
+            playstore: "",
             released: "",
             studio: "",
             platforms: "PC",
@@ -102,6 +106,7 @@ $(document).ready(function () {
             imageUrl: "./images/projectImage4.png",
             description: `This is walkthrough simulator of main building of the SLIIT which is used for exploring the university premises. This project includes the areas of SLIIT Laboratories, Offices and Free areas that player can navigate. Player can also view the details of the lecturers while wander around the map. It was made for the PC and WebGL platforms.`,
             trailerTag: `<iframe src="https://drive.google.com/file/d/1G3lTCTyh767L6OH-rGHf9EpRve1hspCh/preview" width="640" height="480" allow="autoplay"></iframe>`,
+            playstore: "",
             released: "",
             studio: "",
             platforms: "PC | Web",
@@ -133,6 +138,7 @@ $(document).ready(function () {
             imageUrl: "./images/projectImage5.png",
             description: `Dream is a 2D platformer game that player has to escape from a haunted dream. The game was created with Unity engine. I created some of the art assets by using adobe photoshop. In this game player has think before his movements because player is limited to their actions.`,
             trailerTag: `<iframe src="https://drive.google.com/file/d/1dY-uEGZDZwHtlnKRkMZizUIwF9xuw38l/preview" width="640" height="480" allow="autoplay"></iframe>`,
+            playstore: "",
             released: "",
             studio: "",
             platforms: "PC",
@@ -238,10 +244,19 @@ $(document).ready(function () {
                 $("#projectModalContentBodyMetaSectionDetailsRolesAndWorks").append(`
                     <h5 class="projectModalContentBodyMetaSectionDetailsRolesAndWorks metaSectionDetail"
                         id="projectModalContentBodyMetaSectionDetailsRolesAndWorks-${i}">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${selectedProject.rolesAndWork[i]}
+                        •&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${selectedProject.rolesAndWork[i]}
                     </h5>
                 `);
             }
+        } else {
+            $("#projectModalContentBodyMetaSectionDetailsRolesAndWorks").html("");
+        }
+
+        // set meta info - playstore
+        if (selectedProject.playstore !== undefined && selectedProject.playstore.length > 0) {
+            $("#projectModalContentBodyMetaSectionDetailsPlaystore").html(selectedProject.playstore);
+        } else {
+            $("#projectModalContentBodyMetaSectionDetailsPlaystore").html("");
         }
 
         // set screenshots

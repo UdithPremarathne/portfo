@@ -103,6 +103,7 @@ section.appProjects {
                 button.appProjectsContentCellActionsDetails {
                     border-radius: $sp20;
                 }
+
             }
         }
     }
@@ -160,6 +161,16 @@ section.projectModal {
 
                         span.metaSectionDetailKey {
                             font-style: italic;
+                        }
+                    }
+
+                    .projectModalContentBodyMetaSectionDetailsDescription {
+                        margin: 0 0 $sp40 0;
+                    }
+
+                    .projectModalContentBodyMetaSectionDetailsPlaystore {
+                        .projectModalContentBodyMetaSectionDetailsPlaystoreImage {
+                            width: $sp200;
                         }
                     }
                 }
@@ -333,6 +344,10 @@ footer.appFooter {
                             span.metaSectionDetailKey {
                                 font-style: italic;
                             }
+                        }
+
+                        .projectModalContentBodyMetaSectionDetailsDescription {
+                            margin: 0 0 $sp80 0;
                         }
                     }
                 }

@@ -269,6 +269,12 @@ section.projectModal .projectModalContent .projectModalContentBody .projectModal
 section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionDetails .metaSectionDetail span.metaSectionDetailKey {
   font-style: italic;
 }
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionDetails .projectModalContentBodyMetaSectionDetailsDescription {
+  margin: 0 0 40px 0;
+}
+section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionDetails .projectModalContentBodyMetaSectionDetailsPlaystore .projectModalContentBodyMetaSectionDetailsPlaystoreImage {
+  width: 200px;
+}
 section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyScreenshotsSection {
   margin: 40px;
 }
@@ -394,6 +400,9 @@ footer.appFooter .appFooterNavbar ul.appSocialsList {
   }
   section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionDetails .metaSectionDetail span.metaSectionDetailKey {
     font-style: italic;
+  }
+  section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyMetaSection .projectModalContentBodyMetaSectionDetails .projectModalContentBodyMetaSectionDetailsDescription {
+    margin: 0 0 80px 0;
   }
   section.projectModal .projectModalContent .projectModalContentBody .projectModalContentBodyScreenshotsSection .projectModalContentBodyScreenshotsSectionGallery {
     display: grid;
